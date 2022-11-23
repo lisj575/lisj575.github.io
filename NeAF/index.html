@@ -182,7 +182,7 @@ To resolve these issues, we propose an implicit function to learn an angle field
         <img src="./static/images/overview.png">
         <p style="font-size: large;"><b>Overview of our method.</b> The NeAF is designed to estimate normals for point clouds by learning implicit angle fields. 
         Given a query vector sampled on the unit sphere and a local patch as input, the network outputs the angle offset between the query vector and the ground truth normal of the patch.
-        After convergence, an angle field centered on the ground truth normal is formed. At inference time, we use a coarse-to-fine strategy to predict the final normal with angle offset zero from the learned angle field.</p>
+        After convergence, an angle field centered on the ground truth normal is formed. At inference time, we use a coarse-to-fine strategy to predict the final normal with an angle offset zero from the learned angle field.</p>
       </div>
     </div>
   </div>
