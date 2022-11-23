@@ -1,7 +1,7 @@
 window.HELP_IMPROVE_VIDEOJS = false;
 
 var INTERP_BASE = "https://homes.cs.washington.edu/~kpar/nerfies/interpolation/stacked";
-var NUM_INTERP_FRAMES = 240;
+var NUM_INTERP_FRAMES = 0;
 
 var interp_images = [];
 function preloadInterpolationImages() {
