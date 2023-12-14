@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+        content="Learning Neural Angle Fields for Point Normal Estimation.">
+  <meta name="keywords" content="NeAF, APU_LDI">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>NeAF: Learning Neural Angle Fields for Point Normal Estimation</title>
 
@@ -25,20 +25,20 @@
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
 
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="../static/css/bulma.min.css">
+  <link rel="stylesheet" href="../static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="../static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="../static/css/fontawesome.all.min.css">
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="../static/css/index.css">
   <link rel="icon" href="">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
+  <script defer src="../static/js/fontawesome.all.min.js"></script>
+  <script src="../static/js/bulma-carousel.min.js"></script>
+  <script src="../static/js/bulma-slider.min.js"></script>
+  <script src="../static/js/index.js"></script>
 </head>
 <body>
 
@@ -66,6 +66,9 @@
           <a class="navbar-item" href="https://lisj575.github.io/NeAF/">
             NeAF
           </a>
+          <a class="navbar-item" href="https://lisj575.github.io/APU_LDI/">
+            APU_LDI
+          </a>
         </div>
       </div>
     </div>
@@ -80,6 +83,7 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">NeAF: Learning Neural Angle Fields for Point Normal Estimation</h1>
+          <h2 class="title is-4">AAAI 2023 (Oral)</h2>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a>Shujuan Li</a><sup>1*</sup>,</span>
@@ -136,7 +140,7 @@
   <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
-      <img src="./static/images/top.png" class="center">
+      <img src="../static/NeAF/top.png" class="center">
     </div>
   </div>
 </section>
@@ -144,7 +148,7 @@
   <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <div class="column is-full-width">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
@@ -164,7 +168,7 @@ To resolve these issues, we propose an implicit function to learn an angle field
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
         <div class="publication-video">
-          <video src="./static/videos/angle_field.mp4" controls></video>
+          <video src="../static/NeAF/angle_field.mp4" controls></video>
         </div>
       </div>
     </div>
@@ -178,7 +182,7 @@ To resolve these issues, we propose an implicit function to learn an angle field
       <div class="column is-full-width">
         <h2 class="title is-3 has-text-centered">Method</h2>
         <h3 class="title is-4" style="margin-top: 15px;">Overview</h3>
-        <img src="./static/images/overview.png">
+        <img src="../static/NeAF/overview.png">
         <p style="font-size: large;"><b>Overview of our method.</b> The NeAF is designed to estimate normals for point clouds by learning implicit angle fields. 
         Given a query vector sampled on the unit sphere and a local patch as input, the network outputs the angle offset between the query vector and the ground truth normal of the patch.
         After convergence, an angle field centered on the ground truth normal is formed. At inference time, we use a coarse-to-fine strategy to predict the final normal with an angle offset zero from the learned angle field.</p>
@@ -194,9 +198,9 @@ To resolve these issues, we propose an implicit function to learn an angle field
       <div class="column is-full-width">
         <h2 class="title is-3 has-text-centered">Comparison Results</h2>
         <h3 class="title is-4" style="margin-top: 15px;">PCPNet dataset</h3>
-        <img src="./static/images/compare_PCPNet.png" class="center">
+        <img src="../static/NeAF/compare_PCPNet.png" class="center">
         <h3 class="title is-4" style="margin-top: 15px;">Semantic3D dataset</h3>
-        <img src="./static/images/compare_semantic3d.png" class="center">
+        <img src="../static/NeAF/compare_semantic3d.png" class="center">
       </div>
     </div>
   </div>
@@ -210,11 +214,11 @@ To resolve these issues, we propose an implicit function to learn an angle field
         <h2 class="title is-3 has-text-centered">Applications</h2>
         <h3 class="title is-4" style="margin-top: 15px;">Denoising</h3>
         <div class="publication-video">
-          <video src="./static/videos/denoising.mp4" controls></video>
+          <video src="../static/NeAF/denoising.mp4" controls></video>
         </div>
         <h3 class="title is-4" style="margin-top: 15px;">Reconstruction</h3>
         <div class="publication-video">
-          <video src="./static/videos/reconstruction.mp4" controls></video>
+          <video src="../static/NeAF/reconstruction.mp4" controls></video>
         </div>
       </div>
     </div>
